@@ -1,0 +1,53 @@
+.body-randomizer {
+  background-image: url(https://wallpaperaccess.com/full/84303.jpg);
+  background-repeat: no-repeat;
+}
+
+.container-1 {
+  display: flex;
+  flex-flow: column;
+  width: 50%;
+  height: 600px;
+  margin: 100px auto;
+  align-items: center;
+  color: rgb(230, 224, 224);
+  text-shadow: rgb(201, 200, 200) 1px 1px;
+}
+
+.time,
+.name {
+  font-weight: 700;
+  margin: 20px auto;
+  font-size: 3em;
+}
+
+.task {
+  margin: 30px auto;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.quote {
+  margin: 100px auto 10px;
+  font-style: italic;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.add-quote {
+  font-size: 1em;
+}
+
+.body {
+  color: white;
+  display: flex;
+  flex-flow: column;
+  width: 50%;
+  margin: 200px auto;
+  align-items: center;
+  // background-color: indianred;
+}
+
+span {
+  font-size: 2em;
+}
