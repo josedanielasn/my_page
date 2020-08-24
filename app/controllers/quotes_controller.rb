@@ -4,6 +4,7 @@ class QuotesController < ApplicationController
     @quote_all = Quote.all
     @quote_sample = @quote_all.sample(1)
     @quote_print = @quote_sample[0].quote
+    @author_print = @quote_sample[0].author
   end
 
   def index
