@@ -2,16 +2,21 @@
 
 <div class = "list-index">
 
-<table>
-<% @quote.each do |quote|%>
-  <tr>
-    <td> <%= quote.quote %> </td>
-    <td> <%= quote.author %> </td>
-    <td><%= link_to 'Delete', quotes_path(quote), method: :delete%></td>
-    <td><%= link_to 'Edit', edit_quotes_path(quote) %></td>
+<div class = "list-title"><span class = "title-label">List of Quotes</span> </div>
 
-  </tr>
-<%end%>
+<table class = "list">
+  <thead>
+    <th> QUOTES </th>
+    <th> Author </th>
+    <th> Actions </th>
+  </thead>
+  <% @quote.each do |quote|%>
+    <tr>
+      <td class= "main-quote"> " <%= quote.quote%> "</td>
+      <td> -- <%= quote.author %> </td>
+      <td><button class ="link-btn"><%= link_to 'Delete', quotes_path(quote), method: :delete, class: "delete"%></button> <button class ="link-btn"> <%= link_to 'Edit', edit_quotes_path(quote), class: "edit" %></button></td>
+    </tr>
+  <%end%>
 </table>
 
 </div>

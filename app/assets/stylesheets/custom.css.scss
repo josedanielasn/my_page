@@ -56,6 +56,126 @@ span {
 // =================================================================>   INDEX
 
 .body-index {
-  background-image: url(https://previews.123rf.com/images/roystudio/roystudio1310/roystudio131000061/22878230-bright-background-old-paper-texture-or-canvas-texture.jpg);
+  background-image: url(https://cdn.shopify.com/s/files/1/0020/6123/8339/products/2075808006211.jpg?v=1552409259)
+}
 
+.list-index {
+  display: flex;
+  flex-flow: column;
+  margin-top: 50px;
+  align-items: center;
+}
+
+// table,
+// th,
+// td {
+//   border: 1px solid black;
+// }
+
+th {
+  font-size: 1.5em;
+  padding-bottom: 20px;
+}
+
+td {
+  font-size: 1.3em;
+  padding: 10px 15px;
+}
+
+.delete,
+.edit {
+  color: black;
+  text-decoration: none;
+}
+
+.link-btn {
+  border-radius: 10px;
+  width: auto;
+  height: 30px;
+}
+
+.main-quote {
+  font-style: italic;
+}
+
+.list-title {
+  display: flex;
+  justify-content: center;
+  background-image: url("list.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 50px;
+  z-index: 0;
+  height: 200px;
+  width: 700px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.title-label {
+  font-size: 3.5em;
+  display: block;
+  margin-top: 60px;
+  font-weight: 800;
+  color: black;
+  text-shadow: gray 1px 1px;
+}
+
+
+// =================================================================>   NEW
+
+.body-new {
+  background-image: url(https://cdn.shopify.com/s/files/1/0020/6123/8339/products/2075808006211.jpg?v=1552409259);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.form-add {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: 50px auto 10px;
+}
+
+.list-title-add-new {
+  display: flex;
+  justify-content: center;
+  background-image: url("list.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 20px auto 10px;
+  height: 200px;
+  width: 700px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.label {
+  color: black;
+  font-size: 1.5em;
+}
+
+.input-quote {
+  width: 400px;
+  min-height: 30px;
+  border-radius: 5px;
+}
+
+// =================================================================>   EDIT
+
+.body-edit {
+  background-image: url(https://cdn.shopify.com/s/files/1/0020/6123/8339/products/2075808006211.jpg?v=1552409259);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.form-edit {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: 50px auto 10px;
 }

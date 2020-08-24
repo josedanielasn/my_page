@@ -1,10 +1,15 @@
 <body class = "body-new"> 
 <%= form_with scope: :quote, url: quotes_path, local: true do |form| %>
 
-<p class= "body">
+  <div class = "list-title-add-new"><span class = "title-label">Add New Quotes</span> </div>
 
-  <span><%= form.label :"Add Quote:" %><br></span>
-  <%= form.text_field :quote %><br>
+<p class= "form-add">
+
+  <%= form.label :"Add Quote:", class: 'label'%><br>
+  <%= form.text_field :quote, class: 'input-quote' %><br>
+  <%= form.label :"Author:", class: 'label'%><br>
+  <%= form.text_field :author, class: 'input-author' %><br>
+
   <%= form.submit "Add Quote" %>
   
 </p>
@@ -12,5 +17,5 @@
 
 <% end %>
 
-<%= link_to 'Back', home_quotes_path %>
+<%= link_to 'Back',root_path %>
 </body>

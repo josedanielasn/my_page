@@ -24,18 +24,26 @@ class QuotesController < ApplicationController
   end
 
   def edit
+    @quote = Quote.find(params[:id])
   end
 
   def update
+    @quote = Quote.find(params[:id])
+
+  if @quote.update(quotes_params)
+    redirect_to quotes_path
+  else
+    render 'edit'
+  end
   end
 
-  def del
+  def destroy
    @quote = Quote.find(params[:id])
    @quote.destroy
    redirect_to quotes_path
   end
 
   def quotes_params
-    params.require(:quote).permit(:quote)
+    params.require(:quote).permit(:quote, :author)
   end
 end
