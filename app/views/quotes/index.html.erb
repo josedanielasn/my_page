@@ -1,0 +1,19 @@
+<body class = 'body-index'>
+
+<div class = "list-index">
+
+<table>
+<% @quote.each do |quote|%>
+  <tr>
+    <td> <%= quote.quote %> </td>
+    <td> <%= quote.author %> </td>
+    <td><%= link_to 'Delete', quotes_path(quote), method: :delete%></td>
+    <td><%= link_to 'Edit', edit_quotes_path(quote) %></td>
+
+  </tr>
+<%end%>
+</table>
+
+</div>
+
+</body>

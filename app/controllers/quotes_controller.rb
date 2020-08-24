@@ -7,6 +7,7 @@ class QuotesController < ApplicationController
   end
 
   def index
+    @quote = Quote.all
   end
 
   def show
@@ -28,7 +29,10 @@ class QuotesController < ApplicationController
   def update
   end
 
-  def destroy
+  def del
+   @quote = Quote.find(params[:id])
+   @quote.destroy
+   redirect_to quotes_path
   end
 
   def quotes_params
