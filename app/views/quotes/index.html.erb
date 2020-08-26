@@ -14,7 +14,7 @@
     <tr>
       <td class= "main-quote"> " <%= quote.quote%> "</td>
       <td> -- <%= quote.author %> </td>
-      <td><%= link_to 'Delete', quotes_path(quote), method: :delete%>
+      <td><%= link_to 'Delete', delete_quotes_path(quote), method: :delete%>
       <button class ="link-btn"> <%= link_to 'Edit', edit_quotes_path(quote), class: "edit" %></button></td>
     </tr>
   <%end%>

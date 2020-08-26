@@ -16,5 +16,5 @@ require('jquery');
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
 // or the `imagePath` JavaScript helper below.
 //
-import 'src/stylesheets/application'
-const images = require.context('../images', true)
+// import 'src/stylesheets/application'
+// const images = require.context('../images', true)
