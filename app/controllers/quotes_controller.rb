@@ -1,10 +1,10 @@
 class QuotesController < ApplicationController
 
   def randomizer
-    @quote_all = Quote.all
-    @quote_sample = @quote_all.sample(1)
+    @author_all = Author.all
+    @author_sample = @author_all.sample(1)
+    @quote_sample = @author_sample[0].quotes.sample(1)
     @quote_print = @quote_sample[0].quote
-    @author_print = @quote_sample[0].author
   end
 
   def index
@@ -15,13 +15,13 @@ class QuotesController < ApplicationController
   end
 
   def new
-    @quote = Quote.new
+    @author = Author.find_by(params[:author_id])
+    @quote = @author.quotes.build
   end
 
   def create
-    @quote = Quote.new(quotes_params)
-    @quote.save
-    redirect_to new_quotes_path
+    @quote = Quote.create(quote_params)
+    redirect_to author_path(@quote.author)
   end
 
   def edit
@@ -44,7 +44,8 @@ class QuotesController < ApplicationController
    redirect_to quotes_path
   end
 
-  def quotes_params
-    params.require(:quote).permit(:quote, :author)
+  private
+  def quote_params
+    params.permit(:quote, :author_id)
   end
 end

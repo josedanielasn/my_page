@@ -1,0 +1,25 @@
+<h1>List of Users</h1>
+
+<% if (session[:user_id] == nil) %>
+  <%= link_to 'Log in User', login_path%>
+<%end%>
+
+<table>
+  <thead>
+    <th>Username</th>
+    <th>Email</th>
+  </thead>
+<% @user.each do |user| %>
+   <tr>
+   <td><%= user.username %></td>
+   <td><%= user.email %></td>
+   <% if (session[:user_id] == user.id) %>
+   <td>
+   <%= link_to 'Show User Data', show_users_path(user)%>
+   </td>
+   <td><%= link_to 'Edit', edit_users_path(user)%></td>
+   <td><%= link_to 'delete', delete_users_path(user), method: :delete, data: { confirm: 'Are you sure?' }%></td>
+   <%end%>
+   </tr>
+   <%end%>
+</table>

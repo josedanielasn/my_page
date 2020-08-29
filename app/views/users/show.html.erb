@@ -1,0 +1,15 @@
+<h1> User Data </h1>
+
+
+<strong>Username: </strong>
+<%= @user.username%> <br>
+<strong>Email: </strong>
+<%= @user.email%> <br>
+<p>
+<%= link_to 'Edit', edit_users_path(@user)%>
+<%= link_to 'delete', delete_users_path(@user), method: :delete, data: { confirm: 'Are you sure?' }%>
+<%= link_to "Log out", logout_path, method: :delete %></li> 
+</p>
+<p>
+<%= link_to 'List of Users', users_path%>
+</p>

@@ -1,0 +1,14 @@
+<h1> Edit User Data </h1>
+
+
+  <%= form_with(model: @user, :url => {:controller => 'users', :action => 'update'}) do |f| %>
+    <p> Username:</br> <%= f.text_field :username%> </p>
+    <p> Email:</br> <%= f.text_field :email%> </p>
+    <p> Password:</br> <%= f.password_field :password%></p>
+    <%= f.submit :Save %>
+  <% end %>
+
+
+  <%= link_to 'Login here', login_users_path %>
+
+

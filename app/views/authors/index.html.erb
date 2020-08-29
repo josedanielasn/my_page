@@ -1,0 +1,14 @@
+<h1> List of all Authors </h1>
+
+<table>
+<tr>
+  <th> Names </th>
+<tr>
+<% @authors.each do |author| %>
+  <tr>
+    <td><%=author.author_name%></td>
+    <td><%= link_to 'Show Quotes of Author', author_path(author) %></td>
+    <td><%= link_to 'Edit', edit_author_path(author) %></td>
+ </tr>
+<%end%>
+</table>
