@@ -15,7 +15,7 @@ class QuotesController < ApplicationController
   end
 
   def new
-    @author = Author.find_by(params[:author_id])
+    @author = Author.find(params[:author_id])
     @quote = @author.quotes.build
   end
 
