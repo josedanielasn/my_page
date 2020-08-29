@@ -20,7 +20,7 @@ get '/users/:id/edit' =>'users#edit', as: 'edit_users'
 patch '/users/:id' =>'users#update', as: 'update_users'
 delete '/users/:id' =>'users#delete', as: 'delete_users'
 get '/login' => 'users#login', as: 'login_users'
-post '/users /authenticate' => 'users#auth', as:'auth_users'
+post '/users/authenticate' => 'users#auth', as:'auth_users'
 
 
 
