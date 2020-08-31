@@ -11,9 +11,13 @@
 <hr>
 <h2> Quotes </h2>
 
-<% @author.quotes.each do |quote| %>
-  <p>
-    <%= quote.quote %>
-  </p>
+<% @quotes.each do |quote| %>
+<p>
+
+      <%= quote.quote %> |
+      <%= link_to 'Edit', edit_author_quotes_path(quote)%> |
+      <%= link_to 'Delete', delete_author_quotes_path(quote) ,method: :delete%>
+ </p>
+
 <%end%>
 

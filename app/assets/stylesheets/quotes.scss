@@ -1,3 +1,181 @@
-// Place all the styles related to the quotes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+// =================================================================>   RANDOMIZER
+.body-randomizer {
+  background-image: url(https://wallpaperaccess.com/full/84303.jpg);
+  background-repeat: no-repeat;
+}
+
+.container-1 {
+  display: flex;
+  flex-flow: column;
+  width: 50%;
+  height: 600px;
+  margin: 100px auto;
+  align-items: center;
+  color: rgb(230, 224, 224);
+  text-shadow: rgb(201, 200, 200) 1px 1px;
+}
+
+.time,
+.name {
+  font-weight: 700;
+  margin: 20px auto;
+  font-size: 3em;
+}
+
+.task {
+  margin: 30px auto;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.quote {
+  margin: 100px auto 10px;
+  font-style: italic;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.add-quote {
+  font-size: 1em;
+}
+
+.body {
+  color: white;
+  display: flex;
+  flex-flow: column;
+  width: 50%;
+  margin: 200px auto;
+  align-items: center;
+  // background-color: indianred;
+}
+
+span {
+  font-size: 2em;
+}
+
+// =================================================================>   INDEX
+
+.body-index {
+  background-image: url(https://cdn.shopify.com/s/files/1/0020/6123/8339/products/2075808006211.jpg?v=1552409259)
+}
+
+.list-index {
+  display: flex;
+  flex-flow: column;
+  margin-top: 50px;
+  align-items: center;
+}
+
+// table,
+// th,
+// td {
+//   border: 1px solid black;
+// }
+
+th {
+  font-size: 1.5em;
+  padding-bottom: 20px;
+}
+
+td {
+  font-size: 1.3em;
+  padding: 10px 15px;
+}
+
+.delete,
+.edit {
+  color: black;
+  text-decoration: none;
+}
+
+.link-btn {
+  border-radius: 10px;
+  width: auto;
+  height: 30px;
+}
+
+.main-quote {
+  font-style: italic;
+}
+
+.list-title {
+  display: flex;
+  justify-content: center;
+  background-image: url("list.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 50px;
+  z-index: 0;
+  height: 200px;
+  width: 700px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.title-label {
+  font-size: 3.5em;
+  display: block;
+  margin-top: 60px;
+  font-weight: 800;
+  color: black;
+  text-shadow: gray 1px 1px;
+}
+
+
+// =================================================================>   NEW
+
+.body-new {
+  background-image: url(https://cdn.shopify.com/s/files/1/0020/6123/8339/products/2075808006211.jpg?v=1552409259);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.form-add {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: 50px auto 10px;
+}
+
+.list-title-add-new {
+  display: flex;
+  justify-content: center;
+  background-image: url("list.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 20px auto 10px;
+  height: 200px;
+  width: 700px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.label {
+  color: black;
+  font-size: 1.5em;
+}
+
+.input-quote {
+  width: 400px;
+  min-height: 30px;
+  border-radius: 5px;
+}
+
+// =================================================================>   EDIT
+
+.body-edit {
+  background-image: url(https://cdn.shopify.com/s/files/1/0020/6123/8339/products/2075808006211.jpg?v=1552409259);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.form-edit {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: 50px auto 10px;
+}

@@ -9,6 +9,7 @@
     <td><%=author.author_name%></td>
     <td><%= link_to 'Show Quotes of Author', author_path(author) %></td>
     <td><%= link_to 'Edit', edit_author_path(author) %></td>
+    <td><%= link_to 'delete', author_path(author), method: :delete, data: { confirm: 'Are you sure?' }%></td>
  </tr>
 <%end%>
 </table>

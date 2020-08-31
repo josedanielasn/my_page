@@ -1,15 +1,14 @@
 
 <body class ="body-edit">
-<%= form_with model: @quote, url: update_quotes_path() ,local: true do |form| %>
+<%= form_with model: @quote, url: update_author_quotes_path() ,local: true do |form| %>
   <div class = "list-title-add-new"><span class = "title-label">Edit Quotes</span> </div>
 
   <p class ='form-edit'>
   <%= form.label :"Add Quote:", class: 'label'%><br>
   <%= form.text_field :quote, class: 'input-quote' %><br>
-  <%= form.label :"Author:", class: 'label'%><br>
-  <%= form.text_field :author, class: 'input-author' %><br>
+ 
 
-  <%= form.submit "Add Quote" %>
+  <%= form.submit "Save Quote" %>
   </p>
 <%end%>
 </body>

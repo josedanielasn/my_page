@@ -7,8 +7,8 @@ Rails.application.routes.draw do
 get '/authors/:author_id/quotes' =>'quotes#index', as: 'author_quotes'
 post '/authors/:author_id/quotes' =>'quotes#create', as: 'create_author_quotes'
 get '/authors/:author_id/quotes/new' =>'quotes#new', as: 'new_author_quotes'
-get '/authors/:author_id/quotes/:id/edit' =>'quotes#show', as: 'edit_author_quotes'
-get '/authors/:author_id/quotes/:id' =>'quotes#edit', as: 'show_author_quotes'
+get '/authors/:author_id/quotes/:id/edit' =>'quotes#edit', as: 'edit_author_quotes'
+get '/authors/:author_id/quotes/:id' =>'quotes#show', as: 'show_author_quotes'
 patch '/authors/:author_id/quotes/:id' =>'quotes#update', as: 'update_author_quotes'
 delete '/authors/:author_id/quotes/:id' =>'quotes#delete', as: 'delete_author_quotes'
 

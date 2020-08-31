@@ -11,10 +11,18 @@ class AuthorsController < ApplicationController
 
   def show
     @author = Author.find(params[:id])
+    @quotes = @author.quotes
   end
 
   def index
     @authors = Author.all
+  end
+
+  def destroy
+    @author = Author.find(params[:id])
+    @author.quotes.delete_all
+    @author.destroy
+    redirect_to authors_path
   end
 
   private
