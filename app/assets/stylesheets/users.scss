@@ -2,6 +2,44 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.body-login {
-  background-image: url("welcome.png");
+
+// =========================================> NEW / signup
+// =========================================> NEW / signup
+// =========================================> NEW / signup
+
+.body-new {
+  background-image: url("deskLogin2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.title-signup {
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.login-link {
+  color: rgb(32, 32, 32);
+  font-weight: 300;
+}
+
+.input-fields {
+  height: 23px;
+  min-width: 150px;
+  max-width: 250px;
+  background-color: rgb(105, 104, 104);
+  border: none;
+  border-bottom: 2px solid rgb(48, 48, 48);
+  // color: rgb(24, 28, 44);
+  color: rgb(223, 219, 219);
+  padding-left: 10px;
+  font-size: 1.2em;
+}
+
+.input-fields:focus {
+  background-color: rgb(100, 99, 99);
+  outline: none;
+  border-bottom: 2px solid #555;
+  color: black;
 }

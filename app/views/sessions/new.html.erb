@@ -1,15 +1,33 @@
-<h1> Login User </h1>
 
-<%= form_with(url: login_path, scope: :session, local: true) do |f| %>
+<body class ="body-login">
 
-  <%= f.label :username %>
-  <%= f.text_field :username %>
+<div class ="container">
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+  <div class="header-title">
+    <span class ="title">My Desk</span>
+  </div>
 
-  <%= f.submit "Log in" %>
-<% end %>
+  <div class="form">
+    <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
+      <div class ="form-parts">
+        <span class ="form-labels">Username:</span>
+        <%= f.text_field :username, class: "input-fields" %>
+     </div>
+      <div class ="form-parts">
+      <span class ="form-labels">Password:</span>
+      <%= f.password_field :password, class: "input-fields" %>
+      </div>
+      <div class ="form-button">
+      <%= f.submit "Log in", class: "button" %>
+      </div>
+    <% end %>
+      <span class ="signup">
+       Don't have an account yet? 
+   <%= link_to "Sign up", new_users_path, class: "signup-link" %>
+      </span>
+  </div>
 
+</div>
 
+</body>
  

@@ -1,3 +1,107 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+// @font-face {
+//   font-family: "Abril Fatface";
+//   src: url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+// }
+
+.body-login {
+  background-image: url("deskLogin2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: rgb(119, 118, 118);
+  opacity: 80%;
+  width: 500px;
+  height: auto;
+  margin: 50px auto;
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: black 1px 1px;
+}
+
+.header-title {
+  display: flex;
+  margin: 10px auto 20px;
+}
+
+.title {
+  font-family: 'Kaushan Script', cursive;
+  color: rgb(223, 219, 219);
+  font-size: 6em;
+  font-weight: 900;
+  text-shadow: rgb(44, 44, 44) 1.5px 1.5px;
+}
+
+.form {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.form-parts {
+  margin: 10px auto;
+}
+
+.input-fields {
+  height: 23px;
+  min-width: 150px;
+  max-width: 250px;
+  background-color: rgb(119, 118, 118);
+  border: none;
+  border-bottom: 2px solid rgb(48, 48, 48);
+  // color: rgb(24, 28, 44);
+  color: rgb(223, 219, 219);
+  padding-left: 10px;
+  font-size: 1.2em;
+}
+
+.input-fields:focus {
+  background-color: rgb(100, 99, 99);
+  outline: none;
+  border-bottom: 2px solid #555;
+  color: black;
+}
+
+.form-labels {
+  color: rgb(223, 219, 219);
+  // color: rgb(24, 28, 44);
+  // text-shadow: black 1px 1px;
+  font-size: 1.2em;
+}
+
+.form-button {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto 10px;
+}
+
+span {
+  display: block;
+}
+
+.button {
+  background-color: rgb(223, 219, 219);
+  cursor: pointer;
+  height: 20px;
+  width: 60px;
+}
+
+.signup {
+  color: rgb(223, 219, 219);
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.signup-link {
+  color: rgb(32, 32, 32);
+  font-weight: 300;
+}

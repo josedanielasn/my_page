@@ -1,21 +1,44 @@
-<h1> New User Sign up </h1>
 
+<body class= "body-new">
 
-  <h1>Sign Up</h1>
-  <%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
-    <p> Username:</br> <%= f.text_field :username%> </p>
-    <p> Email:</br> <%= f.text_field :email%> </p>
-    <p> Password:</br> <%= f.password_field :password%></p>
-    <%= f.submit :Signup %>
-  <% end %>
-  <% if @user.errors.any? %>
-    <ul class="Signup_Errors">
-    <% for message_error in @user.errors.full_messages %>
-      <li>* <%= message_error %></li>
+  <div class ="container">
+
+    <div class ="title-signup"> Sign up </div>
+    <%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
+    
+      <div class ="form-parts">
+        <span class ="form-labels">Username:</span>
+        <%= f.text_field :username, class: "input-fields" %>
+      </div>
+
+      <div class ="form-parts">
+        <span class ="form-labels">Email:</span>
+        <%= f.text_field :email, class: "input-fields" %>
+      </div>
+
+      <div class ="form-parts">
+        <span class ="form-labels">Password:</span>
+        <%= f.password_field :password, class: "input-fields" %>
+      </div>
+
+      <div class ="form-button">
+      <%= f.submit "Sign up", class: "button" %>
+      </div>
+      
     <% end %>
-    </ul>
-  <% end %>
+    <% if @user.errors.any? %>
+      <ul class="Signup_Errors">
+      <% for message_error in @user.errors.full_messages %>
+        <li>* <%= message_error %></li>
+      <% end %>
+      </ul>
+    <% end %>
 
-  <%= link_to 'Login here', login_users_path %>
-
+    <span class ="signup">
+      Already have an account?
+      <%= link_to 'Login here', login_users_path, class: "login-link" %>
+    </span>
+    
+  </div>
+ </body> 
 
