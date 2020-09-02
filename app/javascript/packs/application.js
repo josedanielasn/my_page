@@ -18,3 +18,4 @@ require('jquery');
 //
 // import 'src/stylesheets/application'
 // const images = require.context('../images', true)
+import "@fortawesome/fontawesome-free/js/all";

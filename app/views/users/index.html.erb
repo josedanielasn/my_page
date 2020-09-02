@@ -1,25 +1,68 @@
-<h1>List of Users</h1>
+
+<body class ="show-body">
+
+<header class = "show-header">
+ <span class ="title">My Desk <span>
+</header>
+
+<div class ="container-index">
+<div class = "page-title">
+List of Users
+</div>
+
 
 <% if (session[:user_id] == nil) %>
-  <%= link_to 'Log in User', login_path%>
+  <%= link_to 'Log in User', login_path, class: "login-link-index"%>
 <%end%>
 
-<table>
+
+<% if (session[:user_id] != nil) %>
+<div class ="active-user">
+
+<div class = "active-user-title">
+Active User
+</div>
+
+ <div class ="body-active-user"> 
+    <div class="container-info">
+      <div class ="body-info-index">
+        <strong class ="label-index">Username: </strong>
+        <span class ="info-index"><%= @current_user.username%> </span>
+      </div>
+
+      <div class ="body-info-index">
+        <strong class ="label-index">Email: </strong>
+        <span class ="info-index"><%= @current_user.email%> </span>
+      </div>
+    </div>
+
+    <div class="options-index">
+      <div class="option">
+        <%= link_to 'Show User Data', show_users_path(@current_user), class:"links"%>
+      </div>
+
+      <div class="option">
+        <%= link_to 'Edit', edit_users_path(@current_user),class:"links edit-link"%>
+        <%= link_to 'delete', delete_users_path(@current_user), method: :delete, data: { confirm: 'Are you sure?' },class:"links delete-link"%>
+      </div>
+    </div>
+  </div>
+
+</div>
+<%end%>
+<table class = "list-of-users">
   <thead>
     <th>Username</th>
     <th>Email</th>
   </thead>
-<% @user.each do |user| %>
+<% @inactive_users.each do |user| %>
    <tr>
    <td><%= user.username %></td>
    <td><%= user.email %></td>
-   <% if (session[:user_id] == user.id) %>
-   <td>
-   <%= link_to 'Show User Data', show_users_path(user)%>
-   </td>
-   <td><%= link_to 'Edit', edit_users_path(user)%></td>
-   <td><%= link_to 'delete', delete_users_path(user), method: :delete, data: { confirm: 'Are you sure?' }%></td>
-   <%end%>
-   </tr>
+  
    <%end%>
 </table>
+
+</div>
+
+</body>

@@ -1,4 +1,6 @@
 class AuthorsController < ApplicationController
+  before_action :logged_in_user, only: [:edit,:update]
+  before_action :admin_user, only: [:delete]
   def new
     
   end

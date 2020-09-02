@@ -1,5 +1,6 @@
 class QuotesController < ApplicationController
-
+  before_action :logged_in_user, only: [:new,:edit,:update]
+  before_action :admin_user, only: [:delete]
   def randomizer
     @author_all = Author.all
     @author_sample = @author_all.sample(1)

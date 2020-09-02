@@ -9,4 +9,9 @@ class ApplicationController < ActionController::Base
         redirect_to login_url
       end
   end
+  def admin_user
+    @current_user = User.find(session[:user_id])
+    @current_user.admin?
+    redirect_to users_path
+  end
 end

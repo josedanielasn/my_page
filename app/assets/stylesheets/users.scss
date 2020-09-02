@@ -2,13 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-
 // =========================================> NEW / signup
 // =========================================> NEW / signup
 // =========================================> NEW / signup
 
 .body-new {
-  background-image: url("deskLogin2.jpg");
+  background-image: url('deskLogin2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -42,4 +41,318 @@
   outline: none;
   border-bottom: 2px solid #555;
   color: black;
+}
+
+// =========================================> SHOW
+// =========================================> SHOW
+// =========================================> SHOW
+.show-body {
+  padding: 0;
+  margin: 0;
+  background-image: url('userdata.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 30px 0px 0px;
+}
+
+.show-header {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  background-color: rgb(104, 103, 103);
+  color: rgb(223, 219, 219);
+  height: 80px;
+  opacity: 90%;
+}
+
+.title {
+  display: block;
+  font-family: 'Kaushan Script', cursive;
+  color: rgb(223, 219, 219);
+  font-size: 3.5em;
+  font-weight: 900;
+  line-height: 65px;
+  text-shadow: rgb(44, 44, 44) 1.5px 1.5px;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: rgb(104, 103, 103);
+  opacity: 80%;
+  width: 500px;
+  height: auto;
+  margin: 50px auto;
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: black 1px 1px;
+}
+
+.page-title {
+  margin: 20px 0 10px;
+  font-size: 2.5em;
+  font-weight: bolder;
+}
+
+.body-info {
+  height: auto;
+  min-width: 300px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.label {
+  color: rgb(223, 219, 219);
+  text-shadow: rgb(44, 44, 44) 1.5px 1.5px;
+  font-size: 1.3em;
+}
+
+.info {
+  background-color: rgb(80, 79, 79);
+  padding: 5px 0px 5px 20px;
+  font-size: 1.5em;
+  margin-top: 10px;
+  color: rgb(218, 218, 224);
+  border-bottom: solid 2px rgb(41, 40, 40);
+}
+
+.buttons {
+  margin: 30px 0 20px;
+  display: flex;
+}
+
+.label-btn {
+  display: block;
+  font-size: 1.5em;
+}
+
+.btn {
+  display: flex;
+  width: 90px;
+  height: 30px;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(104, 103, 103);
+  text-decoration: none;
+  color: rgb(41, 40, 40);
+  font-size: 0.95em;
+  cursor: pointer;
+}
+
+.arrow {
+  color: rgb(41, 40, 40);
+}
+
+.delete-btn {
+  padding-right: 7px;
+  display: flex;
+  justify-content: center;
+}
+
+.edit-btn {
+  width: 80px;
+  padding-right: 25px;
+}
+
+.logout-btn {
+  margin-left: 10px;
+}
+
+.btn:hover {
+  color: rgb(218, 218, 224);
+  font-weight: 700;
+  .arrow {
+    color: rgb(218, 218, 224);
+    font-weight: 800;
+  }
+}
+
+.link-to-users {
+  margin: 10px 0 20px;
+  font-size: 1.3em;
+}
+
+.link-btn {
+  padding: 5px;
+  font-size: 0.9em;
+  text-decoration: none;
+  color: black;
+  border: none;
+  background-color: rgb(223, 219, 219);
+  box-shadow: black 1px 1px;
+  cursor: pointer;
+}
+
+.link-btn:hover {
+  color: rgb(218, 218, 224);
+  font-weight: 400;
+  background-color: rgb(104, 103, 103);
+  border: solid 1.5px rgb(41, 40, 40);
+}
+
+// =========================================> SHOW
+// =========================================> SHOW
+// =========================================> SHOW
+
+.body-form {
+  display: flex;
+  flex-flow: column;
+  height: auto;
+  min-width: 300px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.form-field {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.text-field {
+  background-color: rgb(80, 79, 79);
+  padding: 5px 0px 5px 20px;
+  font-size: 1.3em;
+  margin-top: 10px;
+  color: rgb(218, 218, 224);
+  outline: none;
+  border: none;
+  border-bottom: solid 2px rgb(41, 40, 40);
+}
+
+.submit-btn {
+  margin: 20px auto 10px;
+  width: 100px;
+  font-size: 1em;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(223, 219, 219);
+  box-shadow: black 1px 1px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  color: rgb(218, 218, 224);
+  font-weight: 400;
+  background-color: rgb(104, 103, 103);
+  border: solid 1.5px rgb(41, 40, 40);
+}
+//<%= f.submit :Save %>
+
+// =========================================> INDEX
+// =========================================> INDEX
+// =========================================> INDEX
+
+.container-index {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: rgb(104, 103, 103);
+  opacity: 80%;
+  min-width: 500px;
+  max-width: 700px;
+  min-height: 400px;
+  max-height: 600px;
+  margin: 50px auto;
+  padding: 0 0 20px;
+  border-radius: 10px;
+  box-shadow: black 1px 1px;
+}
+
+.active-user {
+  display: flex;
+  flex-flow: column;
+  width: 80%;
+  margin: 10px 0 20px;
+  padding: 15px;
+  background-color: rgb(70, 68, 68);
+  border: solid 1.5px rgb(32, 32, 32);
+}
+
+.body-active-user {
+  display: flex;
+  flex-flow: row;
+}
+
+.active-user-title {
+  text-decoration: underline;
+  text-align: center;
+  font-size: 1.7em;
+  font-weight: bolder;
+}
+
+.label-index {
+  color: rgb(212, 211, 211);
+  font-size: 1.1em;
+}
+
+.info-index {
+  margin: 5px 0 10px;
+  background-color: rgb(173, 169, 169);
+  padding-left: 20px;
+  padding-right: 10px;
+  font-size: 1.5em;
+  font-weight: 600;
+  border-radius: 5px;
+  border-bottom: solid 1px black;
+}
+
+.options-index {
+  height: 90px;
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.links:hover {
+  color: black;
+  font-weight: 600;
+}
+
+.links {
+  text-decoration: none;
+  color: rgb(173, 169, 169);
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+.edit-link {
+  margin: 0 10px;
+}
+
+.delete-link {
+  margin: 0 10px;
+}
+
+table {
+  margin-left: 80px;
+  width: 80%;
+  text-align: center;
+}
+
+th {
+  text-decoration: underline;
+}
+
+.login-link-index {
+  text-decoration: none;
+  background: rgb(173, 169, 169);
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 1.2em;
+  box-shadow: black 1px 1px;
+}
+
+.login-link-index:visited {
+  color: black;
+}
+
+.login-link-index:hover {
+  background: rgb(70, 68, 68);
+  color: rgb(173, 169, 169);
 }

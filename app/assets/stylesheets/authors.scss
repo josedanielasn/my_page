@@ -1,3 +1,113 @@
 // Place all the styles related to the Authors controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.show-header-author {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  background-color: rgb(62, 71, 63);
+  color: rgb(223, 219, 219);
+  height: 80px;
+  opacity: 90%;
+}
+
+.show-body-author {
+  padding: 0;
+  margin: 0;
+  background-image: url("author.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container-show-author {
+  background-color: rgb(62, 71, 63);
+  width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  opacity: 90%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.body-top {
+  background-color: rgb(40, 46, 41);
+  min-width: 70%;
+  height: 140px;
+  padding: 10px;
+  border: solid rgb(114, 114, 65);
+  border-radius: 5px;
+}
+
+.author-title {
+  font-size: 1.8em;
+  text-align: center;
+  font-weight: 900;
+  color: rgb(168, 179, 127);
+  text-shadow: rgb(27, 27, 27) 0.75px 0.75px;
+}
+
+.author-name {
+  margin: 10px auto 20px;
+  max-width: 90%;
+  font-size: 2.3em;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: rgb(108, 112, 85);
+  color: rgb(203, 211, 159);
+  text-shadow: gray 1px 1px;
+  // border-bottom: solid rgb(160, 159, 159) 2px;
+}
+
+.link-to-add {
+  margin: 0 auto;
+  width: 120px;
+  text-align: center;
+  background-color: rgb(168, 179, 127);
+  font-size: 1.1em;
+  border-radius: 5px;
+}
+
+.link-to-add:hover {
+  background-color: rgb(40, 46, 41);
+  border: solid rgb(114, 114, 65);
+  color: rgb(203, 211, 159);
+
+  .link-to-add-inside {
+    color: rgb(203, 211, 159);
+  }
+}
+
+.link-to-add-inside {
+  color: black;
+  text-decoration: none;
+}
+
+
+.body-bottom {
+  width: 90%;
+  margin: 20px auto 10px;
+}
+
+.quote-list {
+  margin-top: 15px;
+}
+
+.quotes {
+  margin-bottom: 15px;
+  font-size: 1.3em;
+  font-weight: 900;
+  word-spacing: 2.5px;
+  color: rgb(163, 160, 160);
+  text-shadow: black .5px .5px;
+}
+
+.arrow-icon {
+  color: rgb(168, 179, 127);
+}
+
+.option-quote {
+  color: rgb(168, 179, 127);
+}

@@ -1,15 +1,42 @@
-<h1> User Data </h1>
 
 
-<strong>Username: </strong>
-<%= @user.username%> <br>
-<strong>Email: </strong>
-<%= @user.email%> <br>
-<p>
-<%= link_to 'Edit', edit_users_path(@user)%>
-<%= link_to 'delete', delete_users_path(@user), method: :delete, data: { confirm: 'Are you sure?' }%>
-<%= link_to "Log out", logout_path, method: :delete %></li> 
-</p>
-<p>
-<%= link_to 'List of Users', users_path%>
-</p>
+<body class ="show-body">
+
+  <header class = "show-header">
+   <span class ="title">My Desk <span>
+  </header>
+ 
+  <div class ="container">
+
+    <div class = "page-title">
+    User Data
+    </div>
+
+    <div class ="body-info">
+    <strong class ="label">Username: </strong>
+    <span class ="info"><%= @user.username%> </span>
+    </div>
+
+    <div class ="body-info">
+    <strong class ="label">Email: </strong>
+    <span  class ="info"><%= @user.email%> </span>
+    </div>
+
+    <div class ="buttons">
+    <%= link_to edit_users_path(@user), class:"edit-btn btn" do%>
+      <i class="fas fa-caret-left arrow fa-2x"></i> <span class ='label-btn'>Edit</span>
+    <%end%>
+    <%= link_to delete_users_path(@user), method: :delete, data: { confirm: 'Are you sure?' }, class: "delete-btn btn" do%>
+      <span class ='label-btn'>Delete</span>
+    <%end%>
+    <%= link_to logout_path, method: :delete,class: "logout-btn btn" do%>
+      <span class ='label-btn'>Log out</span><i class="fas fa-caret-right arrow fa-2x"></i>
+      <%end%>
+    </div>
+
+    <div class="link-to-users">
+    <%= link_to 'List of Users', users_path, class:'link-btn'%>
+    </div>
+  </div>
+
+</body>

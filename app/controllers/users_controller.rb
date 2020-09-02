@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  # before_action :logged_in_user, only: [:show,:edit,:update,:delete]
+  before_action :logged_in_user, only: [:show,:edit,:update]
+  before_action :admin_user, only: [:delete]
   def new
     @user = User.new
   end
@@ -8,7 +9,7 @@ class UsersController < ApplicationController
     @user = User.new(params_user)
    if @user.save
     flash[:alert] = "User created."
-    redirect_to new_users_path
+    redirect_to users_path
    else
      render 'new'
    end
@@ -33,7 +34,11 @@ class UsersController < ApplicationController
   end
 
   def index 
+    current_user
     @user = User.all
+    @inactive_users = @user.select do |user|
+      user.id != session[:user_id]
+    end
     # @checker = (session[:user_id] == @user.id)
   end
 
@@ -53,6 +58,7 @@ class UsersController < ApplicationController
   def delete
     @user = User.find_by(params[:id])
     @user.destroy
+    log_out
     redirect_to users_path
   end
 

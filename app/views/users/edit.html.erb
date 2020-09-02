@@ -1,15 +1,43 @@
 
-<h1> Edit User Data </h1>
 
+<body class ="show-body">
 
-  <%= form_with(model: @user, :url => {:controller => 'users', :action => 'update'}) do |f| %>
-    <p> Username:</br> <%= f.text_field :username%> </p>
-    <p> Email:</br> <%= f.text_field :email%> </p>
-    <p> Password:</br> <%= f.password_field :password%></p>
-    <%= f.submit :Save %>
+<header class = "show-header">
+ <span class ="title">My Desk <span>
+</header>
+
+<div class ="container">
+<div class = "page-title">
+Edit Info 
+</div>
+
+  <%= form_with(model: @user, :url => {:controller => 'users', :action => 'update'}, class: "form-field") do |f| %>
+    <div class ="body-form">
+    <strong class ="label">Username: </strong>
+    <%= f.text_field :username, class:"text-field"%> 
+    </div>   
+    
+    <div class ="body-form">
+    <strong class ="label">Email: </strong>
+    <%= f.text_field :email, class:"text-field"%> 
+    </div>  
+    <div class ="body-form">
+    <strong class ="label">Password: </strong>
+    <%= f.text_field :password, class:"text-field"%> 
+    </div>  
+    
+    
+    <%= f.submit :Save, class: "submit-btn" %>
+    
   <% end %>
 
 
-  <%= link_to 'Login here', login_users_path %>
+  <div class ="buttons">
+  <%= link_to show_users_path(@user), class:"edit-btn btn" do%>
+    <i class="fas fa-caret-left arrow fa-2x"></i> <span class ='label-btn'>Back</span>
+  <%end%>
 
+  </div>
+
+  </body>
 

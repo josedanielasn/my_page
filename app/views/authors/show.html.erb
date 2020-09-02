@@ -1,23 +1,47 @@
-<h1> Authors & Quotes </h1>
+<body class ="show-body-author">
 
-<p>
-<%= @author.author_name %>
-</p>
+	<header class = "show-header-author">
+	<span class ="title">My Desk <span>
+	</header>
 
-<p>
- <%= link_to "Add Quotes",  new_author_quotes_path(@author) %>
-</p>
 
-<hr>
-<h2> Quotes </h2>
+	<div class ="container-show-author">
+		<div class="body-top">
+			<div class = "author-title">
+				Author:
+			</div>
 
-<% @quotes.each do |quote| %>
-<p>
+			<div class="author-name">			
+				<%= @author.author_name %>
+			</div>			
 
-      <%= quote.quote %> |
-      <%= link_to 'Edit', edit_author_quotes_path(quote)%> |
-      <%= link_to 'Delete', delete_author_quotes_path(quote) ,method: :delete%>
- </p>
+			<div class="link-to-add">
+			<i class="fas fa-plus fa-xs"></i>
+				<%= link_to "Add Quotes",  new_author_quotes_path(@author), class: "link-to-add-inside" %>
+			</div>	
+		</div>
 
-<%end%>
+	<div class="body-bottom">
+		<div class = "author-title">
+			Quotes:
+		</div>
+
+		<div class ="quote-list">
+		<% @quotes.each do |quote| %>
+			<div class ="quotes">
+				<i class="fas fa-angle-right fa-1x arrow-icon"></i>
+				<%= quote.quote %> |
+				<%= link_to edit_author_quotes_path(quote), class: 'option-quote' do %>
+					<i class="far fa-edit"></i> 
+				<%end%>
+					|
+				<%= link_to delete_author_quotes_path(quote) ,method: :delete, class: 'option-quote' do%>
+					<i class="far fa-trash-alt"></i>
+				<%end%>
+			</div>
+		<%end%>
+		</div>
+	</div>
+
+</body>
 

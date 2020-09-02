@@ -1,18 +1,20 @@
 // =================================================================>   RANDOMIZER
 .body-randomizer {
-  background-image: url(https://wallpaperaccess.com/full/84303.jpg);
+  background-image: url("home4.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: top;
 }
 
 .container-1 {
   display: flex;
   flex-flow: column;
   width: 50%;
-  height: 600px;
-  margin: 100px auto;
+  height: 500px;
+  margin: 80px auto;
   align-items: center;
-  color: rgb(230, 224, 224);
-  text-shadow: rgb(201, 200, 200) 1px 1px;
+  color: rgb(14, 13, 13);
+  text-shadow: rgb(214, 208, 208) 2px 2px;
 }
 
 .time,
