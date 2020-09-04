@@ -35,7 +35,7 @@ class QuotesController < ApplicationController
   # For some reason, the "author_id" and "id" have their values switched
   @quote = Quote.find(params[:author_id])
 
-  if @quote.update(params.require(:quote).permit(:quote))
+  if @quote.update(params.require(:quote).permit(:quote, :author_id))
     redirect_to author_path(@quote.author)
   else
     render 'edit'

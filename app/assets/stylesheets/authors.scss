@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-around;
   margin: 0;
-  background-color: rgb(62, 71, 63);
+  background-color: rgb(104, 103, 103);
   color: rgb(223, 219, 219);
   height: 80px;
   opacity: 90%;
@@ -15,29 +15,31 @@
 .show-body-author {
   padding: 0;
   margin: 0;
-  background-image: url("author.jpg");
+  background-image: url('author.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .container-show-author {
-  background-color: rgb(62, 71, 63);
-  width: 500px;
+  background-color: rgb(104, 103, 103);
+  min-width: 500px;
+  max-width: 80%;
   margin: 50px auto;
-  padding: 20px;
+  padding: 20px 0px;
   opacity: 90%;
   display: flex;
   flex-flow: column;
   align-items: center;
   border-radius: 5px;
+
 }
 
 .body-top {
-  background-color: rgb(40, 46, 41);
+  background-color: rgb(66, 68, 66);
   min-width: 70%;
   height: 140px;
   padding: 10px;
-  border: solid rgb(114, 114, 65);
+  border: solid rgb(8, 8, 8);
   border-radius: 5px;
 }
 
@@ -45,19 +47,20 @@
   font-size: 1.8em;
   text-align: center;
   font-weight: 900;
-  color: rgb(168, 179, 127);
-  text-shadow: rgb(27, 27, 27) 0.75px 0.75px;
+  color: black;
+  text-shadow: rgb(36, 35, 35) 0.75px 0.75px;
+  letter-spacing: 1px;
+
 }
 
 .author-name {
   margin: 10px auto 20px;
   max-width: 90%;
   font-size: 2.3em;
+  font-weight: 800;
   text-align: center;
-  text-decoration: underline;
-  text-decoration-color: rgb(108, 112, 85);
-  color: rgb(203, 211, 159);
-  text-shadow: gray 1px 1px;
+  color: rgb(226, 226, 224);
+  text-shadow: rgb(20, 20, 20) 1px 1px;
   // border-bottom: solid rgb(160, 159, 159) 2px;
 }
 
@@ -65,7 +68,7 @@
   margin: 0 auto;
   width: 120px;
   text-align: center;
-  background-color: rgb(168, 179, 127);
+  background-color: rgb(227, 228, 225);
   font-size: 1.1em;
   border-radius: 5px;
 }
@@ -85,29 +88,72 @@
   text-decoration: none;
 }
 
-
 .body-bottom {
   width: 90%;
   margin: 20px auto 10px;
 }
 
 .quote-list {
-  margin-top: 15px;
+  margin: 15px auto;
+  padding: 0px;
 }
 
 .quotes {
   margin-bottom: 15px;
   font-size: 1.3em;
-  font-weight: 900;
+  font-weight: 500;
   word-spacing: 2.5px;
-  color: rgb(163, 160, 160);
-  text-shadow: black .5px .5px;
+  color: rgb(3, 3, 3);
+  text-shadow: rgb(102, 101, 101) 0.5px 0.5px;
+}
+
+.quotes:hover {
+  font-weight: 700;
 }
 
 .arrow-icon {
-  color: rgb(168, 179, 127);
+  color: rgb(146, 145, 143);
 }
 
 .option-quote {
-  color: rgb(168, 179, 127);
+  color: rgb(146, 145, 143);
 }
+
+.option-quote-edit:hover {
+  color: rgb(25, 143, 14);
+}
+
+.option-quote-delete:hover {
+  color: rgb(163, 33, 33);
+}
+
+.quotes-author {
+  color: rgb(146, 145, 143);
+  text-decoration: none;
+}
+
+.quotes-author:hover {
+  color: rgb(154, 168, 24);
+}
+
+.container-show-author-index {
+  background-color: rgb(104, 103, 103);
+  min-width: 500px;
+  max-width: 60%;
+  margin: 50px auto;
+  padding: 20px 0px;
+  padding-right: 20px;
+  opacity: 90%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.list-author-title {
+  padding-left: 30px;
+}
+
+// ========================================> EDIT
+// ========================================> EDIT
+// ========================================> EDIT

@@ -26,21 +26,27 @@
 			Quotes:
 		</div>
 
-		<div class ="quote-list">
+		<table class ="quote-list">
 		<% @quotes.each do |quote| %>
-			<div class ="quotes">
-				<i class="fas fa-angle-right fa-1x arrow-icon"></i>
-				<%= quote.quote %> |
-				<%= link_to edit_author_quotes_path(quote), class: 'option-quote' do %>
+
+			<tr class ="quotes">
+				<td>
+					<i class="fas fa-angle-right fa-1x arrow-icon"></i>
+					<%= quote.quote %>
+				</td>	 
+				<td>
+					<%= link_to edit_author_quotes_path(quote), class: 'option-quote option-quote-edit' do %>
 					<i class="far fa-edit"></i> 
-				<%end%>
-					|
-				<%= link_to delete_author_quotes_path(quote) ,method: :delete, class: 'option-quote' do%>
+					<%end%>
+				</td>
+				<td>
+					<%= link_to delete_author_quotes_path(quote) ,method: :delete, class: 'option-quote option-quote-delete' do%>
 					<i class="far fa-trash-alt"></i>
-				<%end%>
-			</div>
+					<%end%>
+				</td>
+			</tr>
 		<%end%>
-		</div>
+		</table>
 	</div>
 
 </body>

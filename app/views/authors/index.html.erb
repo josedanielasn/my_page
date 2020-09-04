@@ -1,15 +1,27 @@
-<h1> List of all Authors </h1>
+<body class ="show-body-author">
+	<header class = "show-header-author">
+	<span class ="title">My Desk <span>
+	</header>
+
+  <div class ="container-show-author-index">
+    <h1 class ="list-author-title"> List of all Authors </h1>
 
 <table>
-<tr>
-  <th> Names </th>
-<tr>
 <% @authors.each do |author| %>
   <tr>
     <td><%=author.author_name%></td>
-    <td><%= link_to 'Show Quotes of Author', author_path(author) %></td>
-    <td><%= link_to 'Edit', edit_author_path(author) %></td>
-    <td><%= link_to 'delete', author_path(author), method: :delete, data: { confirm: 'Are you sure?' }%></td>
+    <td><%= link_to 'Show Quotes of Author', author_path(author), class:"quotes-author  " %></td>
+    <td>
+      <%= link_to edit_author_path(author), class: 'option-quote option-quote-edit' do %>
+      <i class="far fa-edit"></i> 
+      <%end%>
+    </td>
+    <td><%= link_to author_path(author) ,method: :delete,data: { confirm: 'Are you sure?' } ,class: 'option-quote option-quote-delete' do%>
+      <i class="far fa-trash-alt"></i>
+      <%end%>
+    </td>
  </tr>
 <%end%>
 </table>
+</div>
+</body>

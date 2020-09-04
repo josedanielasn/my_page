@@ -1,20 +1,29 @@
-<body class = "body-new"> 
+<body class ="show-body-author">
 
+  <header class = "show-header-author">
+  <span class ="title">My Desk <span>
+  </header>
 
-  <div class = "list-title-add-new"><span class = "title-label">Add New Quotes</span> </div>
+  <div class = 'container-quotes-edit'>
+      <div class = "list-title-add-edit">
+        <span class = "title-label-edit">Edit Quotes</span> 
+      </div>
 
-  <%= form_tag create_author_quotes_path do %>
+    <%= form_for(:quote, :url => {:controller => 'quotes', :action => 'create'}) do |f| %>
 
-<p class= "form-add">
+    <div class ="form-body">
 
-  <%= label_tag :"Add Quote:"%><br>
-  <%=text_field_tag :quote %><br>
+      <div class ="form-parts">
+          <span class ="label-edit-quote">Quote:</span>
+          <%= f.text_area :quote, class: 'input-quote'%>
+      </div>
 
-  <%=submit_tag "Add Quote" %>
-  
-</p>
-
-<% end %>
+      <div class="submit">
+      <%=f.submit "Add Quote", class:"submit-edit" %>
+      </div>
+    </div>
+  <% end %>
+  </div>
 
 <%= link_to 'Back',root_path %>
 </body>

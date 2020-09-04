@@ -103,7 +103,6 @@ td {
 .list-title {
   display: flex;
   justify-content: center;
-  background-image: url("list.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -144,7 +143,6 @@ td {
 .list-title-add-new {
   display: flex;
   justify-content: center;
-  background-image: url("list.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -168,16 +166,71 @@ td {
 
 // =================================================================>   EDIT
 
-.body-edit {
-  background-image: url(https://cdn.shopify.com/s/files/1/0020/6123/8339/products/2075808006211.jpg?v=1552409259);
-  display: flex;
-  flex-flow: column;
-  align-items: center;
+.list-title-add-edit {
+  margin: 20px auto 20px;
+  font-weight: 800;
+  font-size: 1.7em;
+  text-shadow: rgb(148, 146, 146) 1px 1px;
 }
 
 .form-edit {
   display: flex;
   flex-flow: column;
   align-items: center;
-  margin: 50px auto 10px;
+  margin: 10px auto 10px;
+}
+
+.container-quotes-edit {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(104, 103, 103);
+  opacity: 80%;
+  width: 500px;
+  height: auto;
+  margin: 50px auto;
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: black 1px 1px;
+}
+
+.label-edit-quote {
+  font-size: 1.4em;
+  color: white;
+  margin: 20px 0 10px;
+}
+
+.input-quote {
+  font-size: 1.2em;
+}
+
+.dropdown-select {
+  width: 100px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.submit-edit {
+  width: 120px;
+  margin: 20px auto 20px;
+  background-color: rgb(245, 241, 241);
+  box-shadow: black 1px 1px;
+  font-size: 1.2em;
+  border-radius: 5px;
+}
+
+.submit-edit:hover {
+  background-color: rgb(112, 165, 112);
+}
+
+
+// =================================================================> NEW
+
+
+
+.form-body {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }

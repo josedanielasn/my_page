@@ -1,14 +1,28 @@
+<body class ="show-body-author">
 
-<body class ="body-edit">
-<%= form_with model: @quote, url: update_author_quotes_path() ,local: true do |form| %>
-  <div class = "list-title-add-new"><span class = "title-label">Edit Quotes</span> </div>
+  <header class = "show-header-author">
+    <span class ="title">My Desk <span>
+  </header>
 
-  <p class ='form-edit'>
-  <%= form.label :"Add Quote:", class: 'label'%><br>
-  <%= form.text_field :quote, class: 'input-quote' %><br>
- 
+  <div class = 'container-quotes-edit'>
+    <div class = "list-title-add-edit">
+      <span class = "title-label-edit">Edit Quotes</span> 
+    </div>
 
-  <%= form.submit "Save Quote" %>
-  </p>
-<%end%>
+    <%= form_with model: @quote, url: update_author_quotes_path() ,local: true do |form| %>
+
+      <div class ='form-edit'>
+        <div class = 'edit-body'>
+          <span class= "label-edit-quote"> Quote: </span>
+        <%= form.text_area :quote, class: 'input-quote' %><br>
+        
+        <span class= "label-edit-quote"> Author: </span>
+        <%= form.select :author_id, Author.all.collect { |p| [ p.author_name, p.id ] }, include_blank: "-select author-",class: "dropdown-select" %>
+      </div>
+
+      <div class="submit">
+      <%= form.submit "Save Quote", class: "submit-edit" %>
+      </div>
+    <%end%>
+  </div>
 </body>
