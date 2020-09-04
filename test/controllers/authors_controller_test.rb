@@ -1,7 +1,7 @@
-require 'test_helper'
+# require 'test_helper'
 
-class AuthorsControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
-end
+# class AuthorsControllerTest < ActionDispatch::IntegrationTest
+#   # test "the truth" do
+#   #   assert true
+#   # end
+# end
