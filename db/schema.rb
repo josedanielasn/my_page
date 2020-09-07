@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_29_041646) do
+ActiveRecord::Schema.define(version: 2020_09_07_131240) do
 
   create_table "authors", force: :cascade do |t|
     t.string "author_name"
@@ -18,9 +18,22 @@ ActiveRecord::Schema.define(version: 2020_08_29_041646) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "quote_tags", force: :cascade do |t|
+    t.integer "quote_id"
+    t.integer "tag_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "quotes", force: :cascade do |t|
     t.text "quote"
     t.integer "author_id"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "tag_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
