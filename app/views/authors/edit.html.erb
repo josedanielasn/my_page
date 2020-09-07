@@ -10,14 +10,14 @@
     <div class = "author-title">
       New Author
     </div>
-      <%= form_for :author , url: authors_path do |f| %>
+      <%= form_with(model: @author, :url => {:controller => 'authors', :action => 'update'}) do |f| %>
       <div class = "form-parts">
       <span class ="label-edit-quote">Author:</span>
         <%= f.text_field :author_name, class: 'input-quote' %>
       </div>
 
       <div class = "submit">
-      <%= f.submit :"Create Author", class:"submit-edit" %>
+      <%= f.submit :"Save", class:"submit-edit" %>
     </div>
     <%end%>
 </div>

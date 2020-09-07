@@ -20,9 +20,22 @@ class AuthorsController < ApplicationController
     @authors = Author.all
   end
 
+  def  edit
+    @author = Author.find(params[:id])
+  end
+
+  def update
+    @author = Author.find(params[:id])
+    if @author.update(author_params)
+      redirect_to authors_path(@author)
+    else
+      render 'edit'
+    end
+  end
+
   def destroy
     @author = Author.find(params[:id])
-    @author.quotes.delete_all
+    @author.quotes.delete_all 
     @author.destroy
     redirect_to authors_path
   end

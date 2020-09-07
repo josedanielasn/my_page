@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:show,:edit,:update]
-  before_action :admin_user, only: [:delete]
+  # before_action :admin_user, only: [:delete]
   def new
     @user = User.new
   end
@@ -14,16 +14,6 @@ class UsersController < ApplicationController
      render 'new'
    end
   end
-
-  # def auth
-  #   @user = User.find_by(username: params[:username])
-  #   @result = @user.authenticate(params[:password])
-  #   if @result
-  #     redirect_to users_path
-  #   else
-  #     render 'login'
-  #   end
-  # end
 
   def login
     
