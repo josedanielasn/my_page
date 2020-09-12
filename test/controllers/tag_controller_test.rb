@@ -4,7 +4,6 @@ class TagControllerTest < ActionDispatch::IntegrationTest
 
   setup do
     @user = User.create(username:'jose',email:'jose@yahoo.com',password:'josejose', admin:true)
-    # byebug
     login_user(@user)
     @author = Author.create(author_name:'Dan Angelo')
     @quote = Quote.create(quote:'my new quote',author_id:@author.id)
