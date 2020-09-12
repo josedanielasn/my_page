@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   get    '/login'   => 'sessions#new'
   post   '/login'   => 'sessions#create'
-  delete '/logout'  => 'sessions#destroy'
+  delete '/logout'  => 'sessions#destroy' 
  resources :authors 
+  resources :tags
  
 get '/authors/:author_id/quotes' =>'quotes#index', as: 'author_quotes'
 post '/authors/:author_id/quotes' =>'quotes#create', as: 'create_author_quotes'
@@ -22,6 +23,10 @@ delete '/users/:id' =>'users#delete', as: 'delete_users'
 get '/login' => 'users#login', as: 'login_users'
 post '/users/authenticate' => 'users#auth', as:'auth_users'
 
+post '/tags' =>'tags#create', as: 'create_tag'
+patch '/tags/:id' =>'tags#update', as: 'update_tag'
+get '/tags' =>'tags#index', as: 'index_tag'
+delete '/tags.:id' =>'tags#delete', as: 'delete_tag'
 
 
 root 'quotes#randomizer' 

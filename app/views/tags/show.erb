@@ -1,0 +1,28 @@
+
+<body class ="show-body-author">
+
+<header class = "show-header-author">
+<span class ="title">My Desk <span>
+</header>
+
+<div class ="container">
+
+  <div class ="title-signup"> Tag  </div>
+  
+    <div class ="form-parts">
+      <span class = "tag"><%= @tag.tag_name%></span>
+    </div>
+
+    <div class ="form-button">
+      <span class= 'tag-link'>
+      <%= link_to 'Edit', edit_tag_path(@tag), class:"links"%>
+      </span>
+      <span  class= 'tag-link'>
+      <%= link_to 'Delete', delete_tag_path(@tag), class:"links", method: :delete %>
+      </span>
+    </div>
+    
+    
+  
+</div>
+</body> 

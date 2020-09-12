@@ -1,0 +1,21 @@
+
+<body class ="show-body-author">
+
+  <header class = "show-header-author">
+    <span class ="title">My Desk <span>
+  </header>
+
+  <div class ="container">
+    <h1> Tags </h1>
+    <div class ="container-tag">
+    	
+      <% @tags.each do |tag| %>
+        <div class='tags'>
+          <%= link_to tag_path(tag), class: 'tag' do%>
+					<%= tag.tag_name %>
+		    	<%end%>
+         </div>
+      <%end%>
+    </div>
+  </div>
+</body> 

@@ -9,13 +9,22 @@
         <span class = "title-label-edit">Edit Quotes</span> 
       </div>
 
-    <%= form_for(:quote, :url => {:controller => 'quotes', :action => 'create'}) do |f| %>
+    <%= form_with model:@quote, :url => {:controller => 'quotes', :action => 'create'} do |f| %>
 
     <div class ="form-body">
 
       <div class ="form-parts">
           <span class ="label-edit-quote">Quote:</span>
           <%= f.text_area :quote, class: 'input-quote'%>
+      </div>
+
+      <div class ="form-tags">
+        <%= f.collection_check_boxes :tag_ids,  Tag.all, :id, :tag_name, include_hidden: false do |b| %>
+        <div class="collection-check-box">
+          <%= b.check_box %>
+          <%= b.label %>
+        </div>
+        <% end %>
       </div>
 
       <div class="submit">

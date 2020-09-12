@@ -1,0 +1,27 @@
+
+<body class ="show-body-author">
+
+<header class = "show-header-author">
+<span class ="title">My Desk <span>
+</header>
+
+<div class ="container">
+
+  <div class ="title-signup"> New Tag </div>
+  <%= form_for(:tag, :url => {:controller => 'tags', :action => 'create'}) do |f| %>
+  
+    <div class ="form-parts">
+      <span class ="form-labels">Tag:</span>
+      <%= f.text_field :tag_name, class: "input-fields" %>
+    </div>
+
+    <div class ="form-button">
+    <%= f.submit "Sign up", class: "button" %>
+    </div>
+    
+  <% end %>
+    
+  
+</div>
+</body> 
+
