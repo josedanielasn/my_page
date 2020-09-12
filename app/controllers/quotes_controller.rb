@@ -16,11 +16,9 @@ class QuotesController < ApplicationController
       @quote_print = @quote_sample[0].quote
   end
 
-  def index
-    
-  end
 
   def show
+    @quote = Quote.find(params[:id])
   end
 
   def new
@@ -43,12 +41,12 @@ class QuotesController < ApplicationController
 
   def edit
   # For some reason, the "author_id" and "id" have their values switched
-    @quote = Quote.find(params[:author_id])
+    @quote = Quote.find(params[:id])
   end
 
   def update
   # For some reason, the "author_id" and "id" have their values switched
-  @quote = Quote.find(params[:author_id])
+  @quote = Quote.find(params[:id])
 
   if @quote.update(params.require(:quote).permit(:quote, :author_id,tag_ids: []))
     redirect_to author_path(@quote.author)
@@ -59,7 +57,7 @@ class QuotesController < ApplicationController
 
   def delete
   # For some reason, the "author_id" and "id" have their values switched
-   @quote = Quote.find(params[:author_id])
+   @quote = Quote.find(params[:id])
    @quote.destroy
    redirect_to author_path
   end
