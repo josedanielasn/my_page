@@ -18,6 +18,15 @@
         
         <span class= "label-edit-quote"> Author: </span>
         <%= form.select :author_id, Author.all.collect { |p| [ p.author_name, p.id ] }, include_blank: "-select author-",class: "dropdown-select" %>
+
+         <div class ="form-tags">
+          <%= form.collection_check_boxes :tag_ids,  Tag.all, :id, :tag_name, include_hidden: false do |b| %>
+          <div class="collection-check-box">
+            <%= b.check_box %>
+            <%= b.label %>
+          </div>
+          <% end %>
+        </div>  
       </div>
 
       <div class="submit">

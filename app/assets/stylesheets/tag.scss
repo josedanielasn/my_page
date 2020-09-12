@@ -1,0 +1,36 @@
+// Place all the styles related to the tag controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.container-tag {
+  display: flex;
+  flex-flow: row;
+  margin: 10px;
+}
+
+.tags {
+  margin: 8px;
+  font-size: 1.2em;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.tags:hover {
+  border: solid 1px green;
+  background-color: rgb(115, 172, 115);
+
+  .tag:hover {
+    font-weight: 700;
+  }
+}
+
+
+.tag {
+  text-decoration: none;
+  color: black;
+}
+
+.tag-link {
+  font-size: 1.2em;
+  margin: 10px;
+}

@@ -20,6 +20,11 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should update params" do
+    patch update_users_path(@user), params:{user: {username:'rico_updated',email:'rico@yahoo.com',password:'ricorico'}}
+    assert_response :redirect
+  end
+
   test "should get index" do
     get users_url
     assert_response :success
