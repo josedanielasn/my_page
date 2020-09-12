@@ -45,7 +45,6 @@ class QuotesController < ApplicationController
   end
 
   def update
-  # For some reason, the "author_id" and "id" have their values switched
   @quote = Quote.find(params[:id])
 
   if @quote.update(params.require(:quote).permit(:quote, :author_id,tag_ids: []))
@@ -56,7 +55,6 @@ class QuotesController < ApplicationController
   end
 
   def delete
-  # For some reason, the "author_id" and "id" have their values switched
    @quote = Quote.find(params[:id])
    @quote.destroy
    redirect_to author_path
